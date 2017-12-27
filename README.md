@@ -1,2 +1,2 @@
 # shell
-shell script
+常用shell和Python脚本

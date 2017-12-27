@@ -13,7 +13,7 @@ if [ ! -d "$dump_path" ];then
 fi
 
 #将数据库icitydb1进行全备份
-$dumpmysql -h$host -P39306 -uicityusr1 icitydb1 | gzip >$dump_file
+$dumpmysql -h$host -P39306 -uusername password | gzip >$dump_file
 #检测上一步备份的文件存在且大小不为0时删除上一天的备份文件
 if [ -f "$dump_file" ] && [ `ls -l $dump_file | awk '{print $5}'` -gt 100 ];then
 	cat $dump_path/filename.txt | xargs -i rm {}

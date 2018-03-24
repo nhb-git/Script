@@ -10,7 +10,7 @@ then
 fi
 
 # install basic packages
-apt-get install ansible python3 python3-pip wget vim -y
+apt-get install ansible python3 python3-pip wget vim npm -y
 pip3 install --upgrade pip
 
 # install monaco font
@@ -32,3 +32,7 @@ su - nhb -c "mkdir $home_dir/niuhaibao/Django_Projects"
 echo "export WORKON_HOME=$home_dir/.virtualenvs" >> $home_dir/.bashrc
 echo "export PROJECT_HOME=$home_dir/niuhaibao/Django_Projects" >> $home_dir/.bashrc
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> $home_dir/.bashrc
+
+# npm install bootstrap, vue, jquery
+cd $home_dir/niuhaibao/Django_Projects
+npm install bootstrap vue vue-route jquery

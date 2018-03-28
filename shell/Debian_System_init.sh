@@ -28,7 +28,8 @@ pip3 install django==1.11 pylint-django pylint autopep8
 pip3 install virtualenv virtualenvwrapper
 
 # add virtualenv variable to $home_dir/.bashrc
-su - nhb -c "mkdir $home_dir/niuhaibao/Django_Projects"
+su - nhb -c "mkdir -p $home_dir/niuhaibao/github"
+su - nhb -c "mkdir -p $home_dir/niuhaibao/Django_Projects"
 echo "export WORKON_HOME=$home_dir/.virtualenvs" >> $home_dir/.bashrc
 echo "export PROJECT_HOME=$home_dir/niuhaibao/Django_Projects" >> $home_dir/.bashrc
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> $home_dir/.bashrc

@@ -24,6 +24,10 @@ mkdir -p  $home_dir/vpn && cd $home_dir/vpn
 wget https://github.com/shadowsocks/shadowsocks-qt5/releases/download/v3.0.0/Shadowsocks-Qt5-3.0.0-x86_64.AppImage
 chmod a+x Shadowsocks-Qt5-3.0.0-x86_64.AppImage
 
+# git setting
+git config --global user.email "niuhaibao@gmail.com"
+git config --global user.name "nhb"
+
 # install python3's django depend packages
 pip3 install django==1.11 pylint-django pylint autopep8
 pip3 install virtualenv virtualenvwrapper

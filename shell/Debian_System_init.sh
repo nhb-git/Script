@@ -14,6 +14,7 @@ apt-get install ansible python3 python3-pip wget vim npm -y
 pip3 install --upgrade pip
 
 # install monaco font
+cd /home/nhb/Downloads
 git clone https://github.com/cstrap/monaco-font
 cd  monaco-font
 ./install-font-ubuntu.sh https://github.com/todylu/monaco.ttf/blob/master/monaco.ttf?raw=true

@@ -40,6 +40,7 @@ echo "export WORKON_HOME=$home_dir/.virtualenvs" >> $home_dir/.bashrc
 echo "export PROJECT_HOME=$home_dir/niuhaibao/Django_Projects" >> $home_dir/.bashrc
 echo "export VIRTUALENVWRAPPER_PYTHON=python3" >> $home_dir/.bashrc
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> $home_dir/.bashrc
+echo "alias mygit='cd $home_dir/niuhaibao/github'" >> $home_dir/.bashrc
 source $home_dir/.bashrc
 chown -R nhb.nhb $home_dir/.virtualenvs
 

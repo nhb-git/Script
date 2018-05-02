@@ -10,7 +10,7 @@ then
 fi
 
 # install basic packages
-apt-get install ansible python3 python3-pip wget vim npm gcc make perl -y
+apt-get install ansible python3 python3-pip wget vim npm gcc gcc-c++ openssl-devel make perl -y
 pip3 install --upgrade pip
 apt-get update && apt-get dist-upgrade
 

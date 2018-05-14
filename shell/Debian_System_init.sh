@@ -10,7 +10,18 @@ then
 fi
 
 # install basic packages
-apt-get install ansible python3 python3-pip wget vim npm gcc make perl -y
+apt-get install ansible python3 python3-pip wget vim npm gcc make perl gdebi -y
+
+# modify pip resource and update pip3
+mkdir -p ~/.pip
+echo "[global]" >> ~/.pip/pip.conf
+echo "trusted-host = pypi.douban.com" >> ~/.pip/pip.conf
+echo "index-url = https://pypi.douban.com/simple" >> ~/.pip/pip.conf
+
+su - nhb -c "mkdir -p ~/.pip"
+su - nhb -c 'echo "[global]" >> ~/.pip/pip.conf'
+su - nhb -c 'echo "trusted-host = pypi.douban.com" >> ~/.pip/pip.conf'
+su - nhb -c 'echo "index-url = https://pypi.douban.com/simple" >> ~/.pip/pip.conf'
 pip3 install --upgrade pip
 apt-get update && apt-get dist-upgrade
 
@@ -45,5 +56,5 @@ source $home_dir/.bashrc
 chown -R nhb.nhb $home_dir/.virtualenvs
 
 # npm install bootstrap, vue, jquery
-cd $home_dir/niuhaibao/Django_Projects
-npm install bootstrap vue vue-route jquery
+su - nhb -c "npm config set registry https://registry.npm.taobao.org"
+su - nhb -c "cd $home_dir/niuhaibao/Django_Projects ; npm install bootstrap vue vue-route jquery"

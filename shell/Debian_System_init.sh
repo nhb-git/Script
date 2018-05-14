@@ -10,6 +10,7 @@ then
 fi
 
 # install basic packages
+<<<<<<< HEAD
 apt-get install ansible python3 python3-pip wget vim npm gcc make perl gdebi -y
 
 # modify pip resource and update pip3
@@ -22,6 +23,9 @@ su - nhb -c "mkdir -p ~/.pip"
 su - nhb -c 'echo "[global]" >> ~/.pip/pip.conf'
 su - nhb -c 'echo "trusted-host = pypi.douban.com" >> ~/.pip/pip.conf'
 su - nhb -c 'echo "index-url = https://pypi.douban.com/simple" >> ~/.pip/pip.conf'
+=======
+apt-get install ansible python3 python3-pip wget vim npm gcc gcc-c++ openssl-devel make perl -y
+>>>>>>> e52784bca48edde8bf2792351cdd4111e6a0c830
 pip3 install --upgrade pip
 apt-get update && apt-get dist-upgrade
 

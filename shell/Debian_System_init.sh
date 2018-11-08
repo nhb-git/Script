@@ -25,7 +25,6 @@ EOF
 
 # install basic packages
 apt-get install ansible python3 python3-pip wget vim npm gcc make perl gdebi ssh-askpass bpython -y
-apt-get install ansible python3 python3-pip wget vim npm gcc gcc-c++ openssl-devel make perl -y
 
 # modify pip resource and update pip3
 mkdir -p ~/.pip

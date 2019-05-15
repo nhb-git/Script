@@ -1,5 +1,5 @@
 ﻿#!/bin/env python3
-#导入smtp发件模块
+# 导入smtp发件模块
 import smtplib
  
 #导入邮件内容构造模块

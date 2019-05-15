@@ -1,8 +1,0 @@
-[mysqld_safe]
-log-error = /var/log/mariadb/mariadb.log
-pid-file = /var/run/mariadb/mariadb.pid
-!includedir /etc/my.cnf.d
-
-[client]
-host = 127.0.0.1
-

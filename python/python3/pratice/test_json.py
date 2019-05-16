@@ -21,6 +21,10 @@ print("data2['name']: ", data2['name'])
 
 # 写入json数据
 file_path = os.path.join(basedir, 'file.json')
-print(file_path)
 with open(file_path, 'w') as f:
     json.dump(data, f)
+
+# 读入json数据
+with open(file_path, 'r') as f:
+    data1 = json.load(f)
+print(data1)

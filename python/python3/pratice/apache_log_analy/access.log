@@ -1,3 +1,4 @@
 192.168.1.151 - - [24/Dec/2017:14:09:10 +0800] "GET /static/image/admincp/scrollu.gif HTTP/1.1" 200 335
 192.168.1.151 - - [24/Dec/2017:14:09:09 +0800] "GET /static/image/admincp/scrolld.gif HTTP/1.1" 200 335
 192.168.1.151 - - [24/Dec/2017:14:09:10 +0800] "GET /static/image/admincp/bg_repno.gif HTTP/1.1" 200 5117
+192.168.1.152 - - [24/Dec/2017:14:09:10 +0800] "GET /static/image/admincp/bg_repno.gif HTTP/1.1" 400 5117

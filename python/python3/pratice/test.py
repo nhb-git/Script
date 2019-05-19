@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
-import sys
+import re
+import requests
 
 
-def main():
-    filename = sys.argv[1]
-    print('file name is ' + filename)
-
-
-if __name__ == "__main__":
-    main()
+r = requests.get('http://louiszhai.github.io')
+re.findall('"(https?://.*?)"', r.content.decode('utf-8'))

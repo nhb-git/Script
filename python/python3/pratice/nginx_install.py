@@ -20,7 +20,7 @@ def unpack_package(package_dir, package_name, **kwargs):
     except FileNotFoundError:
         print('Please check {0} exist?'.format(package_full_path))
         sys.exit(1)
-    except OSError:
+    except tarfile.ReadError:
         print(
             'Please check if the {0} format is gzip file'.format(
                 package_full_path

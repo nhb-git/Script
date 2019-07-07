@@ -71,6 +71,7 @@ def main():
     exec_info = exec_cmd(format_compile_command(src_code_dir, install_dir))
     if exec_info[0] != 0:
         print(str(exec_info[1], encoding='utf-8'))
+        print('*************************************')
         sys.exit(exec_info[0])
     print('nginx already compiled and installed.')
     print('*************************************')
@@ -79,6 +80,7 @@ def main():
     exec_info = exec_cmd(format_nginx_start_command(install_dir))
     if exec_info[0] != 0:
         print(str(exec_info[1], encoding='utf-8'))
+        print('*************************************')
         sys.exit(exec_info[0])
     print('nginx already started.')
     print('*************************************')

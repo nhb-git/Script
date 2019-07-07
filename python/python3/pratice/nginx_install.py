@@ -18,13 +18,15 @@ def unpack_package(package_dir, package_name, **kwargs):
         t = tarfile.open(package_full_path, 'r:gz')
         t.extractall(temp_dir)
     except FileNotFoundError:
-        print('Please check %s exist?'.format(package_full_path))
+        print('Please check {0} exist?'.format(package_full_path))
+        sys.exit(1)
     except OSError:
         print(
-            'Please check if the %s format is gzip file'.format(
+            'Please check if the {0} format is gzip file'.format(
                 package_full_path
             )
         )
+        sys.exit(1)
 
     return os.path.join(temp_dir, software_name)
 
@@ -63,7 +65,7 @@ def exec_cmd(cmd):
 def main():
     package = 'nginx-1.12.2.tar.gz'
     package_dir = '/root'
-    install_dir = '/usr/local/nginx-1.12.2'
+    install_dir = '/usr/local/nginx-1.12'
     src_code_dir = unpack_package(package_dir, package)
     # compile and install nginx
     exec_info = exec_cmd(format_compile_command(src_code_dir, install_dir))
@@ -71,6 +73,7 @@ def main():
         print(str(exec_info[1], encoding='utf-8'))
         sys.exit(exec_info[0])
     print('nginx already compiled and installed.')
+    print('*************************************')
 
     # start nginx
     exec_info = exec_cmd(format_nginx_start_command(install_dir))
@@ -78,6 +81,7 @@ def main():
         print(str(exec_info[1], encoding='utf-8'))
         sys.exit(exec_info[0])
     print('nginx already started.')
+    print('*************************************')
 
 
 if __name__ == "__main__":

@@ -2,16 +2,19 @@
 import functools
 
 
-def log(func):
-    @functools.wraps(func)
-    def wrapper(*args, **kw):
-        print('start execute')
-        func(*args, **kw)
-        print('end execute')
-    return wrapper
+def log(arg):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kw):
+            print("decorator's args: {0}".format(arg))
+            print('start execute')
+            func(*args, **kw)
+            print('end execute')
+        return wrapper
+    return decorator
 
 
-@log
+@log('hello world')
 def my_func(a, b, c):
     print('a+b+c=%d' % (a+b+c))
 
@@ -38,6 +41,5 @@ class Student(object):
 
 s = Student()
 s.birth = 20
-s.age = 20
 print(s.birth)
 print(s.age)

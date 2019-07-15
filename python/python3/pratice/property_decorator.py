@@ -40,6 +40,5 @@ class Student(object):
 
 
 s = Student()
-s.birth = 20
 print(s.birth)
 print(s.age)

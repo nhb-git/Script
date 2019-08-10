@@ -25,6 +25,7 @@ EOF
 
 # install basic packages
 apt-get install ansible python3 python3-pip  python3-venv python-pip git wget vim npm gcc make perl gdebi ssh-askpass bpython -y
+apt purge libreoffice-common unity-webapps-common thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese gnome-sudoku transmission-common gnome-orca webbrowser-app landscape-client-ui-install deja-dup -y
 
 # modify pip resource and update pip3
 mkdir -p ~/.pip

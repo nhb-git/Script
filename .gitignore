@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 .vscode
 venv
+__pycache__
+=======
+venv
+.vscode
+__pycache__
+>>>>>>> master

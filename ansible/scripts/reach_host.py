@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import ansible
+
 
 def reach_host(module, host, port, timeout):
     nc_path = module.get_bin_path('nc', required=True)
@@ -11,4 +13,4 @@ def reach_host(module, host, port, timeout):
 
 
 def main():
-    module = AnsibleM
+    module = Ansible

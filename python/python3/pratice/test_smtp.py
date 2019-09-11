@@ -15,7 +15,7 @@ receivers_mail = ['niuhb2@lenovo.com']
 
 mail_host = 'smtp.163.com'
 mail_user = 'niuhaibaovip@163.com'
-mail_password = '6dXR6wWs1xxI'
+mail_password = 'test'
 
 message = MIMEText('Python mail test...', 'plain', 'utf-8')
 message['From'] = _format_addr('niu<%s>' % sender_mail)
@@ -26,9 +26,9 @@ message['Subject'] = Header(subject, 'utf-8').encode()
 
 try:
     smtpObj = smtplib.SMTP()
-    smtpObj.connect(mail_host, 465)
+    smtpObj.connect(mail_host, 25)
     smtpObj.set_debuglevel(1)
-    # smtpObj.starttls()
+    smtpObj.starttls()
     smtpObj.login(mail_user, mail_password)
     smtpObj.sendmail(sender_mail, receivers_mail, message.as_string())
     smtpObj.quit()

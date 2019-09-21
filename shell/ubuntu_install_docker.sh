@@ -21,3 +21,10 @@ sudo apt-get install -y \
 sudo echo "deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu $(lsb_release -cs) stable" \
     >> /etc/apt/sources.list
 sudo apt-get update -y
+
+# check docker's valiable version
+# apt-cache madison docker-ce
+sudo apt-get install docker-ce=... containerd.io -y
+sudo apt-get install docker-compose -y
+
+sudo systemctl enable docker

@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
-sudo yum remove -y docker* \
-              docker-client* \
-              docker-client-latest* \
-              docker-common* \
-              docker-engine*
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
 
 sudo yum install -y yum-utils \
     device-mapper-persistent-data \

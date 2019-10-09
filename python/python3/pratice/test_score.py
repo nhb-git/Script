@@ -57,12 +57,33 @@ new_julie = []
 new_mikey = []
 new_sarah = []
 
-new_james = [sanitize(score) for score in james_score]
-new_julie = [sanitize(score) for score in julie_score]
-new_mikey = [sanitize(score) for score in mikey_score]
-new_sarah = [sanitize(score) for score in sarah_score]
+james_score = sorted([sanitize(score) for score in james_score], reverse=True)
+julie_score = sorted([sanitize(score) for score in julie_score], reverse=True)
+mikey_score = sorted([sanitize(score) for score in mikey_score], reverse=True)
+sarah_score = sorted([sanitize(score) for score in sarah_score], reverse=True)
 
-print(sorted(new_james, reverse=True))
-print(sorted(new_julie, reverse=True))
-print(sorted(new_mikey, reverse=True))
-print(sorted(new_sarah, reverse=True))
+unique_james = list()
+unique_julie = list()
+unique_mikey = list()
+unique_sarah = list()
+
+for each in james_score:
+    if each not in unique_james:
+        unique_james.append(each)
+
+for each in julie_score:
+    if each not in unique_julie:
+        unique_julie.append(each)
+
+for each in mikey_score:
+    if each not in unique_mikey:
+        unique_mikey.append(each)
+
+for each in sarah_score:
+    if each not in unique_sarah:
+        unique_sarah.append(each)
+
+print(unique_sarah[0:3])
+print(unique_james[0:3])
+print(unique_julie[0:3])
+print(unique_mikey[0:3])

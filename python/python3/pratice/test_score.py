@@ -26,32 +26,30 @@ def get_times(times_file):
     '''
     try:
         with open(times_file) as data:
-            times = data.readline()
-        return (times.strip().split(','))
+            line = data.readline()
+        templ = line.strip().split(',')
+        return ({
+            'name': templ.pop(0),
+            'dob': templ.pop(0),
+            'times': str(
+                sorted(
+                    set([sanitize(score) for score in templ]), reverse=True
+                )[0:3]
+            )
+        })
     except IOError as ioerr:
         print('File Error: ' + str(ioerr))
         return None
 
 
-james_score = get_times('james.txt')
-julie_score = get_times('julie.txt')
-sarah_score = get_times('mikey.txt')
-mikey_score = get_times('sarah.txt')
+james = get_times('james.txt')
+print(james['name'] + "'s fastest times are: " + str(james['times']))
 
-james_score = sorted(
-    set([sanitize(score) for score in james_score]), reverse=True
-)
-julie_score = sorted(
-    set([sanitize(score) for score in julie_score]), reverse=True
-)
-mikey_score = sorted(
-    set([sanitize(score) for score in mikey_score]), reverse=True
-)
-sarah_score = sorted(
-    set([sanitize(score) for score in sarah_score]), reverse=True
-)
+julie = get_times('julie.txt')
+print(julie['name'] + "'s fastest times are: " + str(julie['times']))
 
-print(james_score[0:3])
-print(julie_score[0:3])
-print(mikey_score[0:3])
-print(sarah_score[0:3])
+sarah = get_times('mikey.txt')
+print(sarah['name'] + "'s fastest times are: " + str(sarah['times']))
+
+mikey = get_times('sarah.txt')
+print(mikey['name'] + "'s fastest times are: " + str(mikey['times']))

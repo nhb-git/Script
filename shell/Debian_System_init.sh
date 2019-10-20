@@ -41,8 +41,7 @@ su - nhb -c 'echo "trusted-host =  mirrors.aliyun.com" >> ~/.pip/pip.conf'
 su - nhb -c 'echo "index-url = https://mirrors.aliyun.com/pypi/simple" >> ~/.pip/pip.conf'
 pip3 install --upgrade pip
 # install python3's django depend packages
-pip3 install django==1.11 pylint-django pylint autopep8
-pip3 install virtualenv virtualenvwrapper
+pip3 install pylint autopep8 virtualenv virtualenvwrapper
 apt-get update -y && apt-get dist-upgrade -y
 
 # install monaco font

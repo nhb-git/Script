@@ -23,3 +23,4 @@ class Athlete():
         """Add time's list to source times
         """
         self.times.extend(list_times)
+

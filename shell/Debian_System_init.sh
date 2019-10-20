@@ -31,11 +31,13 @@ apt purge unity-webapps-common thunderbird totem rhythmbox empathy brasero simpl
 
 # modify pip resource and update pip3
 mkdir -p ~/.pip
+rm -f ~/.pip/pip.conf
 echo "[global]" >> ~/.pip/pip.conf
 echo "trusted-host =  mirrors.aliyun.com" >> ~/.pip/pip.conf
 echo "index-url = https://mirrors.aliyun.com/pypi/simple" >> ~/.pip/pip.conf
 
 su - nhb -c "mkdir -p ~/.pip"
+su - nhb -c "rm -f ~/.pip/pip.conf"
 su - nhb -c 'echo "[global]" >> ~/.pip/pip.conf'
 su - nhb -c 'echo "trusted-host =  mirrors.aliyun.com" >> ~/.pip/pip.conf'
 su - nhb -c 'echo "index-url = https://mirrors.aliyun.com/pypi/simple" >> ~/.pip/pip.conf'

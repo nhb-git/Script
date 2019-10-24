@@ -63,6 +63,7 @@ chmod a+x Shadowsocks-Qt5-3.0.0-x86_64.AppImage
 # git setting
 git config --global user.email "niuhaibao@gmail.com"
 git config --global user.name "nhb"
+git config --global credential.helper store
 
 # add virtualenv variable to $home_dir/.bashrc
 su - nhb -c "mkdir -p $home_dir/niuhaibao/github"

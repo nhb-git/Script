@@ -29,6 +29,9 @@ sudo apt remove libappstream3
 apt-get install ansible python3 python3-pip  python3-venv python-pip git wget vim npm gcc make perl gdebi ssh-askpass bpython zsh -y
 apt purge unity-webapps-common thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese gnome-sudoku transmission-common gnome-orca webbrowser-app landscape-client-ui-install deja-dup -y
 
+chsh -s /bin/zsh
+su - nhb -c "chsh -s /bin/zsh"
+
 # modify pip resource and update pip3
 mkdir -p ~/.pip
 rm -f ~/.pip/pip.conf

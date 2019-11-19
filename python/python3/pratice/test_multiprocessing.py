@@ -5,6 +5,7 @@
 
 import os
 import glob
+import shutil
 from multiprocessing import Process, Pool
 
 
@@ -30,12 +31,20 @@ def get_filelist(path):
     print('Child process {0} ({1})'.format(file_list, os.getpid()))
 
 
+def delete_dir(path):
+    try:
+        shutil.rmtree(path)
+        print('Child process {0} ({1})'.format(path, os.getpid()))
+    except FileNotFoundError:
+        print('error')
+
+
 def mul_pool():
     print('Parent process {0}'.format(os.getpid()))
-    p = Pool(8)
+    p = Pool(2)
     with open('/tmp/test') as f:
         for line in f:
-            p.apply_async(get_filelist, args=(line.strip(),))
+            p.apply_async(delete_dir, args=(line.strip(),))
     print('Waiting for all subprocesses done...')
     p.close()
     p.join()

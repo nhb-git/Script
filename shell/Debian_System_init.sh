@@ -26,7 +26,7 @@ EOF
 apt-get update -y 
 sudo apt remove libappstream3
 # install basic packages
-apt-get install ansible python3 python3-pip  python3-venv python-pip git wget vim npm gcc make perl gdebi ssh-askpass bpython zsh -y
+apt-get install ansible python3 python3-pip  python3-venv python-pip git wget vim  gcc make perl gdebi ssh-askpass bpython zsh -y
 apt purge unity-webapps-common thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese gnome-sudoku transmission-common gnome-orca webbrowser-app landscape-client-ui-install deja-dup -y
 
 chsh -s /bin/zsh

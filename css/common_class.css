@@ -1,0 +1,26 @@
+/*
+.p_color{
+    color: green;
+}
+
+.p_size{
+    font-size: 20px;
+}
+
+.p_bold{
+    font-weight: bold;
+}
+*/
+#p1{
+    color: green;
+    font-size: 20px;
+}
+#p2{
+    color: green;
+    font-weight: bold;
+}
+
+#p3{
+    font-weight: bold;
+    font-size: 30px;
+}

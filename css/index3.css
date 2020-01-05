@@ -1,3 +1,29 @@
 h4{
-    color:blue;
+    color:hotpink;
 }
+p{
+    color:hotpink;
+    font-size: 14px;
+}
+#peiqi{
+    color: red;
+}
+.active{
+    color: gray;
+}
+.title{
+    font-size: 30px;
+}
+/*
+css选择器：
+    1. 基础选择器
+        - 标签选择器
+        - 类选择器
+        - id选择器
+    2. 高级选择器
+        - 后代选择器
+        - 子代选择器
+        - 组合选择器
+        - 交集选择器
+        - 伪类选择器
+*/

@@ -1,0 +1,26 @@
+div p{
+    color: red;
+}
+
+div>p{
+    color: green;
+}
+div,p{
+    color: gray;
+}
+a:link{
+    color: red;
+}
+
+/*
+a:visited{
+    color: gray;
+}
+*/
+a:hover{
+    color: gray;
+}
+
+a:active{
+    color: green;
+}

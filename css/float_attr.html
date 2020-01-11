@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float attr</title>
+
+    <style type="text/css">
+        .top_bar{
+            border: 1px solid red;
+        }
+        .child1{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            float: left;
+        }
+        .child2{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            float: left;
+        }
+        .header{
+            background-color: #333;
+            width: 100px;
+            height: 100px;
+        }
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- 浮动现象
+        0. 文字环绕
+        1. 脱离了标准文档流
+        2. 浮动元素互相贴靠
+        3. 浮动元素有收缩现象 
+        4. 破坏： 父元素高度塌陷
+    -->
+    <!--
+        清除浮动方法：
+            1. 给父元素设置高度，确定是不够灵活
+            2. 内墙法, 在最后一个浮动元素的后面加一个空的块级元素，并设置该属性clear: both 
+                ， 导致结构冗余
+            3. 伪元素选择器清除
+            4. overflow: hidden
+    -->
+    <div class="top_bar">
+        <div class="child1">儿子</div>
+        <div class="child2">二儿子</div>
+        <div class="clear"></div>
+    </div>
+    <div class="header"></div>
+</body>
+</html>

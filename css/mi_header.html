@@ -8,35 +8,66 @@
         <style type="text/css">
             .site-header{
                 width: 100%;
-                height: 150px;
+                height: 120px;
                 background-color: red;
             }
-            
             .container{
-                width: 1124px;
-                margin: 0 auto;
+                width: 1226px;
                 background-color: green;
+                margin: 0 auto;
             }
-
-            .site-header .nav_logo{
-                float: left; 
+            .site-header .nav-logo{
+                float: left;
+                margin-top: 30px;
             }
-            .site-header .xiaomi-logo{
+            .nav-logo img{
                 width: 60px;
                 height: 60px;
+            }
+            .nav-logo a{
+                width: 60px;
+                height: 60px;
+                display: block;
+            }
+            .site-header .nav-list{
+                float: left;
+                width: 850px;
+                height: 90px;
+                padding: 15px 0 15px 50px;
+            }
+            .nav-list li{
+                float: left;
+            }
+            .nav-list li a{
+                display: block;
+                color: #333;
+                padding: 35px 10px 35px;
+            }
+            .clearfix::after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+            .site-header .site-search{
+                float: right;
+                width: 130px;
+                margin-top: 30px;
             }
         </style>
     </head>
 
     <body>
         <div class="site-header">
-            <div class="container">
-                <div class="nav_logo">
+            <div class="container clearfix">
+                <div class="nav-logo">
                     <a href="#">
                         <img src="xiaomi.png" class="xiaomi-logo" alt="小米logo">
                     </a>
                 </div>
                 <ul class="nav-list">
+                    <li>
+                        <a href="#">全部商品分类</a>
+                    </li>
                     <li>
                         <a href="#">小米手机</a>
                     </li>

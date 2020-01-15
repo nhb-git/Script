@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>小米导航栏</title>
+
+        <link rel="stylesheet" href="reset.css">
+        <style type="text/css">
+            .site-header{
+                width: 100%;
+                height: 120px;
+            }
+            .container{
+                width: 1226px;
+                margin: 0 auto;
+            }
+            .site-header .nav-logo{
+                float: left;
+                margin-top: 30px;
+            }
+            .nav-logo img{
+                width: 60px;
+                height: 60px;
+            }
+            .nav-logo a{
+                width: 60px;
+                height: 60px;
+                display: block;
+            }
+            .site-header .nav-list{
+                float: left;
+                width: 800px;
+                height: 90px;
+                padding: 15px 0 15px 50px;
+            }
+            .nav-list li{
+                float: left;
+            }
+            .nav-list li a{
+                display: block;
+                color: #333;
+                padding: 35px 10px 35px;
+            }
+            .nav-list li a:hover{
+                color: orange;
+            }
+            .clearfix::after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+            .site-header .site-search{
+                float: right;
+                width: 250px;
+                margin-top: 38px;
+            }
+            .site-search form{
+                width: 250px;
+                height: 55px;
+            }
+            .site-search form input.content{
+                float: left;
+                width: 180px;
+                height: 20px;
+                border: 1px solid #e0e0e0;
+                padding: 14px 10px;
+            }
+            .site-search form input.search{
+                float: left;
+                width: 38px;
+                height: 50px;
+                border: 1px solid #e0e0e0;
+                margin-left: -1px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="site-header">
+            <div class="container clearfix">
+                <div class="nav-logo">
+                    <a href="#">
+                        <img src="xiaomi.png" class="xiaomi-logo" alt="小米logo">
+                    </a>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#">全部商品分类</a>
+                    </li>
+                    <li>
+                        <a href="#">小米手机</a>
+                    </li>
+                    <li>
+                        <a href="#">Redmi 红米</a>
+                    </li>
+                    <li>
+                        <a href="#">电视</a>
+                    </li>
+                    <li>
+                        <a href="#">笔记本</a>
+                    </li>
+                    <li>
+                        <a href="#">家电</a>
+                    </li>
+                    <li>
+                        <a href="#">路由器</a>
+                    </li>
+                    <li>
+                        <a href="#">智能硬件</a>
+                    </li>
+                    <li>
+                        <a href="#">服务</a>
+                    </li>
+                    <li>
+                        <a href="#">社区</a>
+                    </li>
+                </ul>
+                <div class="site-search">
+                    <form>
+                        <input type="text" class="content">
+                        <input type="submit" value="搜索" class="search">
+                    </form>
+                </div>
+            </div>
+        </div>  
+    </body>
+</html>

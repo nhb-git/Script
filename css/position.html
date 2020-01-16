@@ -1,35 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Position</title>
+    <meta charset="utf-8">
+    <title>定位</title>
 
     <style type="text/css">
-        .one{
-            width: 100px;
-            height: 300px;
-            background-color: green;
-            border: 3px solid #73ad21;
+        body{
+            border: 1px solid orange;
         }
-        .two{
-            position: fixed;
-            top: 50px;
-            right: 5px;
-            background-color: #333;
+        div{
+            color: #fff;
+            width: 200px;
+            height: 200px;
         }
-        .three{
+        div.one{
+            background-color: red;
             position: absolute;
             top: 30px;
-            background-color: red;
-            z-index: 2;
+            left: 100px;
+            
+        }
+        div.two{
+            background-color: green;
+            /* position: relative; */
+            top: 100px;
+        }
+        div.three{
+            background-color: blue;
         }
     </style>
 </head>
 <body>
-    <div class="one">one</div>
-    <div class="two">two</div>
-    <div class="three">three</div>
+    <!--
+        position: static
+        1. 相对定位，relative
+        2. 绝对定位, absolute
+        3. 固定定位, fixed
+    -->
+    <!--
+        相对定位：不脱离标准文档流， 可以调整元素
+        参考点：
+            以原来元素的参考点来定位
+    -->
+    <div class="one">One</div>
+    <div class="two">Two</div>
+    <div class="three">Three</div>
 </body>
 </html>

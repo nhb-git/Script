@@ -29,7 +29,7 @@
             }
             .site-header .nav-list{
                 float: left;
-                width: 800px;
+                width: 750px;
                 height: 90px;
                 padding: 15px 0 15px 50px;
             }
@@ -51,26 +51,44 @@
             }
             .site-header .site-search{
                 float: right;
-                width: 250px;
+                width: 300px;
                 margin-top: 38px;
             }
             .site-search form{
-                width: 250px;
+                width: 350px;
                 height: 55px;
+                position: relative;
             }
             .site-search form input.content{
                 float: left;
-                width: 180px;
+                width: 150px;
                 height: 20px;
                 border: 1px solid #e0e0e0;
                 padding: 14px 10px;
             }
             .site-search form input.search{
                 float: left;
-                width: 38px;
+                width: 50px;
                 height: 50px;
                 border: 1px solid #e0e0e0;
+                background-color: #fff;
                 margin-left: -1px;
+            }
+            .search_word{
+                position: absolute;
+                top: 15px;
+                right: 185px;
+                font-size: 13px;
+            }
+            .search_word span{
+                background-color: #eee;
+                color: #757575;
+                padding: 0px 3px;
+            }
+            .search_word span:hover{
+                cursor: pointer;
+                background-color: #ff6700;
+                color: #fff;
             }
         </style>
     </head>
@@ -119,6 +137,10 @@
                     <form>
                         <input type="text" class="content">
                         <input type="submit" value="搜索" class="search">
+                        <div class="search_word">
+                            <span>小米9</span>
+                            <span>小米9 SE</span>
+                        </div>
                     </form>
                 </div>
             </div>

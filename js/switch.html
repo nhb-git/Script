@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch选择</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var weather = 53;
+        switch(weather){
+            case 'sunny':
+                alert(weather);
+                break;
+            case '53':
+                alert(weather);
+                // 默认匹配成功后会继续向下运行，添加break终止运行
+                break;
+            default:
+                alert('Error');
+                break;
+        }
+    </script>
+</body>
+</html>

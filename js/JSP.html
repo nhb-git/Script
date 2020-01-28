@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>javascript内置对象</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var colors = new Array();
+        if(Array.isArray(colors)){
+            alert("colors 是一个数组");
+            colors[0] = 'red';
+            colors[1] = 'green';
+            console.log(colors);
+            console.log(colors.toString());
+            console.log(colors[0]);
+            console.log(colors.length);
+        }else{
+            alert("colors不是一个数组");
+        }
+    </script>    
+</body>
+</html>

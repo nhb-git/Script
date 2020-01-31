@@ -87,6 +87,12 @@ body{
 .site-header .site-list ul li a:hover{
     color: #ff6700;
 }
+.site-header .site-list .site-category{
+    position: relative;
+    float: left;
+    width: 127px;
+    padding-right: 15px;
+}
 .site-header .site-search{
     float: right;
     width: 296px;

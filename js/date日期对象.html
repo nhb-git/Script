@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>date日期对象</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var now = new Date();
+        console.log(now.getDate()); // 获取月份的第几天(1-31)
+        console.log(now.getMonth());  // 获取月份(0-11), 0代表1月
+        console.log(now.getFullYear()); // 获取年
+        console.log(now.getDay());  // 获取星期几(0-6), 0代表星期日
+        console.log(now.getHours());  // 获取小时数(0-23)
+        console.log(now.getMinutes()); // 获取分钟(0-59)
+        console.log(now.getSeconds()); // 获取秒数(0-59)
+
+        // 日期格式化方法
+        console.log(now.toDateString());  // 获取星期几 年月日
+        console.log(now.toTimeString());    // 获取时分秒，时区
+        console.log(now.toLocaleDateString());
+        console.log(now.toLocaleTimeString());
+        console.log(now.toLocaleString());
+    </script>
+</body>
+</html>

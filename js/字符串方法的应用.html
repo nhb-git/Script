@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串方法的应用</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var str = "hello e he wored, oek hello wo. ";
+        var pos = str.indexOf('e');
+        var array = [];
+        while(pos > -1){
+            array.push(pos);
+            pos = str.indexOf('e', pos+1);
+        }
+        console.log(array);
+    </script>
+</body>
+</html>

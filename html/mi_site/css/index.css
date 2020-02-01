@@ -70,21 +70,21 @@ body{
     width: 850px;
     float: left;
 }
-.site-header .site-list ul{
+.site-header .site-list>ul{
     width: 820px;
     height: 88px;
     padding: 12px 0 0 30px;
     font-size: 16px;
 }
-.site-header .site-list ul li{
+.site-header .site-list>ul>li{
     float: left;
 }
-.site-header .site-list ul li a{
+.site-header .site-list>ul>li>a{
     display: block;
     padding: 26px 10px 45px;
     color: #333;
 }
-.site-header .site-list ul li a:hover{
+.site-header .site-list>ul>li>a:hover{
     color: #ff6700;
 }
 .site-header .site-list .site-category{
@@ -92,6 +92,39 @@ body{
     float: left;
     width: 127px;
     padding-right: 15px;
+}
+.site-header .site-list .site-category .category-list{
+    position: absolute;
+    top: 95px;
+    left: -92px;
+    width: 234px;
+    height: 460px;
+    background-color: rgba(0,0,0,0.6);
+}
+.site-header .site-list .site-category .category-list>ul{
+    height: 420px;
+    padding: 20px 0px;
+}
+.site-header .site-list .site-category .category-list>ul>li{
+    width: 234px;
+    height: 42px;
+}
+.site-header .site-list .site-category .category-list>ul a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 0 0 30px;
+    position: relative;
+}
+.site-header .site-list .site-category .category-list>ul a:hover{
+    background-color: #ff6700;
+}
+.site-header .site-list .site-category .category-list>ul a span{
+    position: absolute;
+    right: 16px;
+    font-size: 16px;
 }
 .site-header .site-search{
     float: right;
@@ -136,3 +169,5 @@ body{
     background-color: #ff6700;
 
 }
+
+/* 小米商城站点内容 */

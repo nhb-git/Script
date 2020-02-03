@@ -1,0 +1,72 @@
+{
+  "id": "1626678",
+  "name": "xiaomi-site",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3096199",
+      "name": "话费充值",
+      "font_class": "huafeichongzhi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "3096411",
+      "name": "米粉卡",
+      "font_class": "mifenqia",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "4560421",
+      "name": "购物车",
+      "font_class": "cart",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "6245748",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "7039695",
+      "name": "礼盒",
+      "font_class": "lihe",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "7563303",
+      "name": "右箭头",
+      "font_class": "iconleft",
+      "unicode": "e694",
+      "unicode_decimal": 59028
+    },
+    {
+      "icon_id": "7588112",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "9844520",
+      "name": "小米商城F码",
+      "font_class": "xiaomishangchengFma",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "9898021",
+      "name": "以旧换新",
+      "font_class": "NewToOld",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    }
+  ]
+}

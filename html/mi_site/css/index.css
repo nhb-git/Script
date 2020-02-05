@@ -174,6 +174,15 @@ body{
 /* 小米商城站点内容 */
 .site-content .site-slider{
     position: relative;
+    z-index: 2;
+}
+.site-content .site-slider>a{
+    display: block;
+    width: 1226px;
+    height: 460px;
+}
+.site-content .site-slider>a img{
+    width: 1226px;
 }
 .site-content .site-slider span{
     position: absolute;
@@ -218,3 +227,139 @@ body{
 }
 
 /* 小米商城向导列表 */
+.content-sub{
+    margin-top: 20px;
+    overflow: hidden;
+}
+.content-sub .content-channel{
+    float: left;
+    width: 234px;
+    height: 170px;
+}
+.content-sub .content-channel ul{
+    font-size: 12px;
+    text-align: center;
+    background-color: #5f5750;
+}
+.content-sub .content-channel ul li{
+    float: left;
+    width: 33.33%;
+    height: 85px;
+}
+.content-sub .content-channel ul li a{
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 12px;
+}
+.content-sub .content-channel ul li a i{
+    font-size: 20px;
+    display: block;
+}
+.content-sub .content-list{
+    float: right;
+    width: 992px;
+}
+.content-sub .content-list ul{
+    width: 100%;
+}
+.content-sub .content-list ul li{
+    float: left;
+    width: 33.33%;
+    text-align: right;
+}
+.content-sub .content-list ul li a{
+    display: block;
+    height: 170px;
+}
+.content-sub .content-list ul li a img{
+    width: 316px;
+    height: 170px;
+}
+
+.site-content .site-banner{
+    margin: 22px 0px;
+}
+.site-content .site-banner a{
+    display: block;
+    width: 1226px;
+    height: 120px;
+}
+.site-content .site-banner a img{
+    width: 1226px;
+    height: 120px;
+}
+
+/* 小米商城内容描述 */
+.content-desc{
+    background-color: #f5f5f5;
+    padding-top: 22px;
+}
+.content-desc .container .box-hd{
+    position: relative;
+    height: 58px;
+}
+.content-desc .container .box-hd h2{
+    font-size: 22px;    
+    font-weight: 200;
+    color: #333;
+    line-height: 58px;
+}
+.content-desc .container .box-hd .more{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.content-desc .container .box-hd .more a{
+    font-size: 16px;
+    line-height: 58px;
+    color: #424242;
+}
+.content-desc .container .box-hd .more a i{
+    width: 12px;
+    height: 12px;
+    padding: 4px;
+    margin-left: 6px;
+    border-radius: 12px;
+    background-color: #b0b0b0;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: 2px;
+}
+.content-desc .container .box-hd .more:hover a{
+    color: #ff6700;
+}
+.content-desc .container .box-hd .more:hover a i{
+    background-color: #ff6700;
+}
+/* 小米商城内容详情 */
+.content-desc .box-bd .row-l{
+    float: left;
+    width: 234px;
+}
+.content-desc .box-bd .row-r{
+    float: left;
+    width: 992px;
+}
+.content-desc .box-bd .row-l a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.content-desc .box-bd .row-l a img{
+    width: 234px;
+    height: 614px;
+}
+.content-desc .box-bd .row-r ul{
+    overflow: hidden;
+}
+.content-desc .box-bd .row-r ul li{
+    float: left;
+    height: 260px;
+    padding: 20px 0;
+    background-color: #fff;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}

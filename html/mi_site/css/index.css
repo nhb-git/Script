@@ -293,6 +293,7 @@ body{
 .content-desc{
     background-color: #f5f5f5;
     padding-top: 22px;
+    padding-bottom: 15px;
 }
 .content-desc .container .box-hd{
     position: relative;
@@ -351,12 +352,142 @@ body{
 }
 .content-desc .box-bd .row-r ul{
     overflow: hidden;
+    width: 992px;
+    height: 614px;
 }
 .content-desc .box-bd .row-r ul li{
     float: left;
+    width: 234px;
     height: 260px;
     padding: 20px 0;
     background-color: #fff;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    position: relative;
+}
+.content-desc .box-bd .row-r ul li:hover{
+    top: -3px;
+    box-shadow: 3px 3px 10px #b0b0b0;
+}
+.content-desc .box-bd .row-r ul li a div{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 18px;
+}
+.content-desc .box-bd .row-r ul li a div img{
+    width: 100%;
+    height: 100%;
+}
+.content-desc .box-bd .row-r ul li a .title{
+    font-size: 14px;
+    font-weight: 200;
+    color: #333;
+    text-align: center;
+    margin: 0 10px 2px;
+}
+.content-desc .box-bd .row-r ul li a .desc{
+    font-size: 12px;
+    font-weight: 200;
+    color: #b0b0b0;
+    text-align: center;
+    margin: 0 10px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.content-desc .box-bd .row-r ul li a .price{
+    text-align: center;
+    color: #ff6700;
+}
+.content-desc .box-bd .row-r ul li a .price del{
+    color: #b0b0b0;
+}
+/* 小米商城脚部栏 */
+.footer{
+    background-color: #fff;
+}
+.footer .footer-service{
+    padding: 27px 0px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.footer .footer-service ul li{
+    float: left;
+    width: 19.5%;
+    height: 25px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    border-left: 1px solid #e0e0e0;
+}
+.footer .footer-service ul .first{
+    border-left: 0;
+}
+.footer .footer-service ul li a{
+    color: #616161;
+    font-size: 16px;
+}
+.footer .footer-service ul li a:hover{
+    color: #ff6700;
+}
+.footer .footer-service ul li a i{
+    font-size: 22px;
+    vertical-align: -4px;
+}
+.footer .footer-links{
+    padding: 40px 0px;
+}
+.footer .footer-links dl{
+    float: left;
+    width: 160px;
+    height: 120px;
+}
+.footer .footer-links dl dt{
+    color: #424242;
+    padding: 10px 0px 20px;
+    font-size: 14px;
+}
+.footer .footer-links dl dd{
+   margin: 5px auto;
+}
+.footer .footer-links dl dd a{
+   color: #757575;
+}
+.footer .footer-links dl dd a:hover{
+   color: #ff6700;
+}
+.footer .footer-links .col-contact{
+    float: right;
+    width: 265px;
+    height: 120px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+}
+.footer .footer-links .col-contact .iphone{
+    color: #ff6700;
+    font-size: 22px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.footer .footer-links .col-contact p{
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.footer .footer-links .col-contact a{
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 auto;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    background-color: #fff;
+    width: 118px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.footer .footer-links .col-contact a:hover{
+    color: #fff;
+    background-color: #ff6700;
 }
 .clearfix::after{
     content: "";

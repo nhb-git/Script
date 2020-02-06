@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "745715",
+      "name": "7天无理由退货",
+      "font_class": "footer-7",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
       "icon_id": "3096199",
       "name": "话费充值",
       "font_class": "huafeichongzhi",
@@ -18,6 +25,13 @@
       "font_class": "mifenqia",
       "unicode": "e601",
       "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "4422409",
+      "name": "定位",
+      "font_class": "location",
+      "unicode": "e605",
+      "unicode_decimal": 58885
     },
     {
       "icon_id": "4560421",
@@ -55,6 +69,13 @@
       "unicode_decimal": 58914
     },
     {
+      "icon_id": "8500327",
+      "name": "维修",
+      "font_class": "weixiu",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
       "icon_id": "9844520",
       "name": "小米商城F码",
       "font_class": "xiaomishangchengFma",
@@ -67,6 +88,13 @@
       "font_class": "NewToOld",
       "unicode": "e604",
       "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "12069951",
+      "name": "15天免费换货_24px.",
+      "font_class": "tianmianfeihuanhuo_px",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
     }
   ]
 }

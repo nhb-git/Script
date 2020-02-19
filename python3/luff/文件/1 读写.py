@@ -19,8 +19,12 @@
 
 
 # 读写+
-f = open('test-rename1.txt', 'a+')
-f.write('test,r+\n')
-print(f.readline())
-print(f.readline())
+# f = open('test-rename1.txt', 'a+')
+# f.write('test,r+\n')
+# print(f.readline())
+# print(f.readline())
+# f.close()
+f = open('test-rename1.txt', 'wb')
+f.write('niu'.encode('utf-8'))
 f.close()
+

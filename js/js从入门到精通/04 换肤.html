@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>换肤</title>
+    <link id="l1" rel="stylesheet" href="skin1.css">
+    <script>
+        function skin1(){
+            var linkHref = document.getElementById('l1');
+            linkHref.href = 'skin1.css';
+        }
+        function skin2(){
+            var linkHref = document.getElementById('l1');
+            linkHref.href = 'skin2.css';
+        }
+    </script>
+</head>
+<body>
+    <!-- 
+        1. html中任何的标签元素都可以加id
+        2. html中任何标签元素的属性都可以被修改
+    -->
+    <input type="button" value="皮肤1" onclick="skin1()">
+    <input type="button" value="皮肤2" onclick="skin2()">
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        function toGreen(){
+            var oDiv = document.getElementById('div1');
+            oDiv.style.width = '300px';
+            oDiv.style.height = '300px';
+            oDiv.style.background = 'green';
+        }
+        function toRed(){
+            document.getElementById('div1').style.width = '200px';
+            document.getElementById('div1').style.height = '200px';
+            document.getElementById('div1').style.background = 'red';
+        }
+    </script>
+</head>
+<body>
+    <div id="div1" onmouseover="toGreen();" onmouseout="toRed();"></div>
+</body>
+</html>

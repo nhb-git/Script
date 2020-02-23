@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐藏显示</title>
+    <style>
+        #div1{
+            width: 50px;
+            height: 300px;
+            background-color: #ccc;
+            display: none;
+        }
+    </style>
+    <script>
+        function showContent(){
+            var oDiv = document.getElementById('div1');
+            if(oDiv.style.display == 'block')
+            {
+                oDiv.style.display = 'none';
+            }
+            else
+            {
+                oDiv.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="隐藏显示" onclick="showContent();">
+    <div id="div1"></div>
+</body>
+</html>

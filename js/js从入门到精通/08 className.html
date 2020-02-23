@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>className</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .box{
+            background-color: red;
+        }
+    </style>
+    <script>
+        function setColor(){
+            var oDiv = document.getElementById('div1');
+            oDiv.className = 'box';
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="改变颜色" onclick="setColor();">
+    <div id="div1"></div>
+</body>
+</html>

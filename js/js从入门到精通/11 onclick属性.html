@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+    <script>
+        window.onload = function (){
+            oBtn = document.getElementById('btn1');
+            /*
+            function abc()
+            {
+                alert('a')
+            }
+            */
+            oBtn.onclick = function (){
+                alert('a');
+            };
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn1">
+</body>
+</html>

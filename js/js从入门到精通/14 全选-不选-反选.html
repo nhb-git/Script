@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全选-不选-反选</title>
+    <script>
+        window.onload = function (){
+            var bTn1 = document.getElementById('btn1');
+            var bTn2 = document.getElementById('btn2');
+            var bTn3 = document.getElementById('btn3');
+            var oDiv = document.getElementById('div1');
+            var oIput = oDiv.getElementsByTagName('input');
+            bTn1.onclick = function (){
+                for(var i=0; i<oIput.length; i++){
+                    oIput[i].checked = true;
+                }
+            };
+            bTn2.onclick = function (){
+                for(var i=0; i<oIput.length; i++)
+                {
+                    oIput[i].checked = false;
+                }
+            };
+            bTn3.onclick = function (){
+                for(var i=0; i<oIput.length; i++)
+                {
+                    if(oIput[i].checked == true)
+                    {
+                        oIput[i].checked = false;
+                    }
+                    else
+                    {
+                        oIput[i].checked = true;
+                    }
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="btn1" value="全选">
+    <input type="button" id="btn2" value="不选">
+    <input type="button" id="btn3" value="反选">
+    <div id="div1">
+        <input type="checkbox"><br/>
+        <input type="checkbox"><br/>
+        <input type="checkbox"><br/>
+        <input type="checkbox"><br/>
+        <input type="checkbox"><br/>
+        <input type="checkbox"><br/>
+        <input type="checkbox"><br/>
+        <input type="checkbox"><br/>
+    </div>
+</body>
+</html>

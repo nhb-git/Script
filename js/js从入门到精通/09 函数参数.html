@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数参数</title>
+
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function setColor(color)
+        {
+            var oDiv = document.getElementById('div1');
+            oDiv.style.background = color;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="变绿" onclick="setColor('green')">
+    <input type="button" value="变红" onclick="setColor('red')">
+    <input type="button" value="变黑" onclick="setColor('black')">
+    <div id="div1"></div>
+</body>
+</html>

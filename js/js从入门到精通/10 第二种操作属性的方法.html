@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二种操作属性的方法</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+    <script>
+        function setStyle(name, value)
+        {
+            var oDiv = document.getElementById('div1');
+            oDiv.style[name] = value;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="变宽" onclick="setStyle('width', '200px');">
+    <input type="button" value="变高" onclick="setStyle('height', '200px');">
+    <input type="button" value="变绿" onclick="setStyle('background', 'green');">
+    <div id="div1"></div>
+</body>
+</html>

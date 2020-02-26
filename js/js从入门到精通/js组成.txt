@@ -1,0 +1,10 @@
+ECMAScript:
+    1. 翻译js代码为计算机语言 -- 解释器
+    2. 几乎没有兼容性问题
+DOM:
+    1. document object model
+    2. 提供操作html的能力
+    3. 有一些兼容性问题
+BOM:
+    1. Brower object model
+    2. 提供了操作浏览器的能力

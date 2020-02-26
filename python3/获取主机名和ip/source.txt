@@ -1,0 +1,43 @@
+va32ldcscweb04          7032018c-4be4-4b35-8f8f-735a0347209e    dmz_v616=10.62.123.180  8-32-100        va32losnova128/R225
+va32ldcscweb03          d50c90fd-a02d-4ba0-aa9d-607f0b1c214f    dmz_v616=10.62.123.179  8-32-100        va32losnova131/R226
+New instances
+va32ldcscweb02          9a0e945c-a062-46cf-be98-50cfc8e8bf49    dmz_v616=10.62.123.178  8-32-100        va32losnova114/R223
+va32ldcscweb01          846b9914-bee7-45a4-aa7b-c4d7b2a5867f    dmz_v616=10.62.123.177  8-32-100        va32losnova112/R222
+
+New instances
+va32ldcscolbgui01       a522ac81-73fa-404b-b269-8447f4c5df2a    sen_v3031=10.62.132.144 8-32-100        va32losnova124/R225
+va32ldcscxconf10        738885d7-8962-4f20-838e-5c2225a6992e    sen_v3031=10.62.132.143 8-32-100        va32losnova111/R221
+va32ldcscxconf09        bed78ac6-8f6c-46b6-a1d3-e4d1a209d251    sen_v3031=10.62.132.142 8-32-100        va32losnova107/R222
+va32ldcscxconf08        f1f338be-8c05-4cd4-888c-4a22c6bb9db9    sen_v3031=10.62.132.141 8-32-100        va32losnova121/R224
+va32ldcscxconf07        84ef6f5e-d11c-475c-8df5-11cd9149fca3    sen_v3031=10.62.132.140 8-32-100        va32losnova129/R225
+va32ldcscxconf06        5d79e184-83be-43ae-a6d7-a92e0c82aa43    sen_v3031=10.62.132.139 8-32-100        va32losnova133/R226
+va32ldcscxconf05        db917004-d09e-4e04-9747-ef9950248e24    sen_v3031=10.62.132.138 8-32-100        va32losnova105/R222
+va32ldcscxconf04        f22da904-9411-4a72-b9e9-84b5d8b081a6    sen_v3031=10.62.132.137 8-32-100        va32losnova116/R223
+va32ldcscxconf03        5ee6628b-6638-4a28-a29b-df7b0bf765b2    sen_v3031=10.62.132.136 8-32-100        va32losnova118/R224
+va32ldcscxconf02        e2d1d996-45d7-4ff4-9df7-fbe0da463ff7    sen_v3031=10.62.132.135 8-32-100        va32losnova125/R225
+va32ldcscxconf01        25ac9fbc-d1ed-46c9-be34-7a8cc3686729    sen_v3031=10.62.132.134 8-32-100        va32losnova131/R226
+va32ldcscrule02         0a473fcf-eafd-4a61-b50b-1ad14226e8a6    sen_v3031=10.62.132.133 8-32-100        va32losnova126/R225
+va32ldcscrule01         0732d149-fdb7-4d73-b6a9-b4675133667a    sen_v3031=10.62.132.132 8-32-100        va32losnova133/R226
+va32ldcscnacos02        41c29bd1-2e72-4a96-994a-ee4ab8b635da    sen_v3031=10.62.132.131 8-32-100        va32losnova122/R224
+va32ldcscnacos01        4be56a2c-40da-447e-84b5-bd2898e3d3d2    sen_v3031=10.62.132.130 8-32-100        va32losnova126/R225
+va32ldcscmq01           fb6b7853-93ec-4b44-a10f-85b1b721bad2    sen_v3031=10.62.132.129 16-64-100       va32losnova130/R226
+
+Make sure the following servers IP changed
+va32ldcscdcgauth02      3c4aa061-cdb9-4386-851f-3f89380d00bb    sen_v3031=10.62.132.166 16-64-100       va32losnova131/R226
+va32ldcscdcsm02         0529894c-576a-4fb0-9cbc-8ab3d4692a26    sen_v3031=10.62.132.168 16-64-100       va32losnova126/R225
+va32ldcscapp11          da5f284f-b286-400b-9d9f-0a1359b0766d    sen_v3031=10.62.132.161 16-64-100       va32losnova130/R226
+va32ldcscapp10          c7c7a4fa-05ea-436a-9596-1cf9e2c010df    sen_v3031=10.62.132.160 16-64-100       va32losnova127/R225
+va32ldcscapp09          6aca616d-03ae-41f7-87ca-7e8010103c3b    sen_v3031=10.62.132.159 16-64-100       va32losnova132/R226
+va32ldcscapp08          90cd3687-1ced-47e1-80f3-959d2d74efec    sen_v3031=10.62.132.158 16-64-100       va32losnova128/R225
+va32ldcscapp07          9981aeae-c543-4c16-86cf-4a498867067e    sen_v3031=10.62.132.157 16-64-100       va32losnova133/R226
+va32ldcscdcsm01         7f141afc-fa9b-4062-8a77-7c8c5043581a    sen_v3031=10.62.132.167 16-64-100       va32losnova121/R224
+va32ldcscdcgauth01      e900c46b-eda3-4c99-aa57-836f5b0ea956    sen_v3031=10.62.132.165 16-64-100       va32losnova102/R221
+va32ldcscredis03        a8c3d06d-e213-4023-9045-a208c1bec3e5    sen_v3031=10.62.132.164 16-128-100      va32losnova108/R223
+va32ldcscredis02        d2a3cba2-f4bf-4656-b11d-afcc70401712    sen_v3031=10.62.132.163 16-128-100      va32losnova118/R224
+va32ldcscredis01        31541c84-091d-46e0-95a8-4fc50de658fa    sen_v3031=10.62.132.162 16-32-100       va32losnova107/R222
+va32ldcscapp06          61aec636-9070-4602-b1c6-a6a0fec7c0d7    sen_v3031=10.62.132.156 16-64-100       va32losnova109/R223
+va32ldcscapp05          58a5bec2-a861-4857-bae6-05ee97be780e    sen_v3031=10.62.132.155 16-64-100       va32losnova120/R224
+va32ldcscapp04          0f532872-5d12-4d57-861c-62755e199a91    sen_v3031=10.62.132.154 16-64-100       va32losnova105/R222
+va32ldcscapp03          9301a8aa-6832-4356-9207-48dac4963e89    sen_v3031=10.62.132.153 16-64-100       va32losnova111/R221
+va32ldcscapp02          46423fa8-536f-418e-8671-54357c3d357c    sen_v3031=10.62.132.152 16-64-100       va32losnova106/R222
+va32ldcscapp01          731841a0-b889-4702-b27f-a51fbad41311    sen_v3031=10.62.132.151 16-64-100       va32losnova119/R224

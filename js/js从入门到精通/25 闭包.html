@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包</title>
+    <script>
+        function aaa()
+        {
+            // 闭包： 子函数可以使用和修改父函数的变量
+            var a = 12;
+            function bbb()
+            {
+                a = 13
+                alert(a);
+            }
+            bbb()
+            alert(a);
+        }
+        aaa();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

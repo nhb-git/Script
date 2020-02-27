@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器的开启和关闭{</title>
+    <script>
+        function show(){
+            alert('a');
+        }
+
+        window.onload = function (){
+            var oBtn1 = document.getElementById('btn1');
+            var oBtn2 = document.getElementById('btn2');
+            oBtn1.onclick = function (){
+                timer = setInterval(
+                    show, 2000
+                );
+            }
+            oBtn2.onclick = function (){
+                clearInterval(timer);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="btn1" type="button" value="开启">
+    <input type="button"  id="btn2" value="关闭">
+</body>
+</html>

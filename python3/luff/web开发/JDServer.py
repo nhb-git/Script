@@ -8,7 +8,8 @@ while 1:
     print('Server Waiting...')
     conn, addr = sock.accept()
     data = conn.recv(1024)
-    print(data)
-    print(addr)
-    conn.send("HTTP/1.1 200 OK\r\n\r\nhello niu!".encode("utf-8"))
+
+    with open('index.html') as f:
+        send_content = f.read()
+    conn.send("HTTP/1.1 200 OK\r\n\r\n{0}".format(send_content).encode("utf-8"))
     conn.close()

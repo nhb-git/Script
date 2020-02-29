@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>父节点</title>
+    <script>
+        window.onload = function (){
+            var aA = document.getElementsByTagName('a');
+
+            for(var index=0; index<aA.length; index++)
+            {
+                aA[index].onclick = function (){
+                    this.parentNode.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>aaa<a href="javascript:;">隐藏</a></li>
+        <li>bbb<a href="javascript:;">隐藏</a></li>
+        <li>ccc<a href="javascript:;">隐藏</a></li>
+    </ul>
+</body>
+</html>

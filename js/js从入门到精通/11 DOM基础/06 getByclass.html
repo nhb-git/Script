@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getByclass</title>
+    <script>
+        function getByclass(oParent, sclass){
+            var oAll = oParent.getElementsByTagName('*');
+            var aResult = [];
+
+            for(var index=0; index<oAll.length; index++)
+            {
+                if(oAll[index].className==sclass)
+                {
+                    aResult.push(oAll[index]);
+                }
+            }
+
+            return aResult;
+        }
+
+        window.onload = function (){
+            var oUl = document.getElementById('ul1');
+            var aBox = getByclass(oUl, 'box');
+
+            for(var index=0; index<aBox.length; index++)
+            {
+                aBox[index].style.background = 'red';
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li class="box"></li>
+        <li></li>
+        <li class="box"></li>
+        <li class="box"></li>
+    </ul>
+</body>
+</html>

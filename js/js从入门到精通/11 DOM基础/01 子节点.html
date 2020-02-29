@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子节点</title>
+    <script>
+        window.onload = function (){
+            var oUl = document.getElementById('ul1');
+
+            alert(oUl.children.length);
+            for(var i in oUl.children)
+            {
+                // nodeType: 3代表文本节点
+                // nodeType: 1代表元素节点
+                // if(oUl.childNodes[i].nodeType==1)
+                // {
+                    // oUl.childNodes[i].style.background = 'red';
+                // }
+                oUl.children[i].style.background = 'red';
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li></li>
+        <li></li>
+    </ul>    
+</body>
+</html>

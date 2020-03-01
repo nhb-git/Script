@@ -14,13 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path, include
+from django.urls import path, re_path
+
+
+from app01 import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-
     # 路由配置：访问路径 --- 视图函数
-    # 导入应用路由配置
-    re_path(r'^', include("app01.urls")),
+    path('timer/', views.timer),
+    path('login/', views.login),
+    re_path(r'^articles/(?P<year>[0-9]{4})/$', views.get_year),
 ]

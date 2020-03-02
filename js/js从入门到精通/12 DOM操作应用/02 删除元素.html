@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除元素</title>
+
+    <script>
+        window.onload = function (){
+            var aA = document.getElementsByTagName('a');
+            var oUl = document.getElementById('ul1');
+
+            for(var index=0; index<aA.length; index++)
+            {
+                aA[index].onclick = function (){
+                    oUl.removeChild(this.parentNode);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li>12<a href="javascript:;">删除</a></li>
+        <li>123<a href="javascript:;">删除</a></li>
+        <li>1234<a href="javascript:;">删除</a></li>
+        <li>12345<a href="javascript:;">删除</a></li>
+    </ul>
+</body>
+</html>

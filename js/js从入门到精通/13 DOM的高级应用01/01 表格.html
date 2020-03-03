@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+
+    <script>
+        window.onload = function (){
+            var oTab = document.getElementById('tab1');
+            var oldColor = '';
+
+            for(var index=0; index<oTab.tBodies[0].rows.length; index++)
+            {
+                oTab.tBodies[0].rows[index].onmouseover = function (){
+                    oldColor = this.style.background;
+                    this.style.background = 'green';
+                }
+
+                oTab.tBodies[0].rows[index].onmouseout = function (){
+                    this.style.background = oldColor;
+                }
+                if(index % 2)
+                {
+                    oTab.tBodies[0].rows[index].style.background = '#CCC';
+                }
+                else
+                {
+                    oTab.tBodies[0].rows[index].style.background = 'red';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <table id="tab1" border="1" width="500px">
+        <thead>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>年龄</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>李四</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>li排序</title>
+    <style>
+        #ul1 li{
+            background: red;
+        }
+        #ul2 li{
+            background-color: green;
+        }
+    </style>
+
+    <script>
+        window.onload = function (){
+            var oUl1 = document.getElementById('ul1');
+            var oUl2 = document.getElementById('ul2');
+            var oBtn = document.getElementById('btn1');
+
+            oBtn.onclick = function (){
+                oLi = oUl1.children[0];
+                // oUl1.removeChild(oLi);
+                // appendChild先是将子元素从旧的父级移除，再将子元素添加到新的父级
+                oUl1.appendChild(oLi);
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <input type="button" name="" id="btn1" value="移动">
+</body>
+</html>

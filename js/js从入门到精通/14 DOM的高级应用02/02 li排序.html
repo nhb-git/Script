@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>li排序</title>
+    <style>
+        #ul1 li{
+            background: red;
+        }
+    </style>
+
+    <script>
+        window.onload = function (){
+            var oUl1 = document.getElementById('ul1');
+            var oBtn = document.getElementById('btn1');
+
+            oBtn.onclick = function (){
+                var aLi = oUl1.getElementsByTagName('li');
+                var arr = new Array();
+
+                for(var index=0; index<aLi.length; index++)
+                {
+                    arr.push(aLi[index]);
+                }
+
+                arr.sort(function (li1, li2){
+                    var n1 = parseInt(li1.innerHTML);
+                    var n2 = parseInt(li2.innerHTML);
+
+                    return n1-n2;
+                });
+
+                for(var index in arr)
+                {
+                    oUl1.appendChild(arr[index]);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li>12</li>
+        <li>2</li>
+        <li>34</li>
+        <li>4</li>
+    </ul>
+    <input type="button" name="" id="btn1" value="排序">
+</body>
+</html>

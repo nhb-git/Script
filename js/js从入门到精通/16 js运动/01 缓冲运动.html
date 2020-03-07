@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缓冲运动</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 1400px;
+        }
+        #div2{
+            width: 1px;
+            height: 200px;
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 700px;
+        }
+    </style>
+    <script>
+        window.onload = function (){
+            var oDiv = document.getElementById('div1');
+            var oBtn = document.getElementById('btn1');
+            
+            oBtn.onclick = function (){
+                startMove(oDiv, 700);
+            };
+        };
+
+        var timer = null;
+        function startMove(obj, iTarget){
+            var speed = 0;
+            var speedRatio = 0.08;
+
+            clearInterval(timer);
+            timer = setInterval(function (){
+                if(obj.offsetLeft == iTarget)
+                {
+                    clearInterval(timer);
+                }
+                else
+                {
+                    speed = (iTarget - obj.offsetLeft) * speedRatio;
+                    speed = speed>0?Math.ceil(speed):Math.floor(speed);
+                    obj.style.left = obj.offsetLeft + speed + 'px';
+                }
+            }, 30);
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="开始运动" id="btn1"> 
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>

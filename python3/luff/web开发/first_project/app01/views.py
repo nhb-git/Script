@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from django.urls import reverse
 
 # Create your views here.
 import time
@@ -19,6 +20,7 @@ def get_year(request, year):
 
 def login(request):
     if request.method == 'GET':
+        print(reverse("login1"))
         return render(request, "login.html")
     if request.method == 'POST':
         username = request.POST.get("username")

@@ -23,6 +23,6 @@ from app01 import views
 urlpatterns = [
     # 路由配置：访问路径 --- 视图函数
     path('timer/', views.timer),
-    path('login/', views.login),
+    path('login/', views.login, name="login1"),
     re_path(r'^articles/(?P<year>[0-9]{4})/$', views.get_year),
 ]

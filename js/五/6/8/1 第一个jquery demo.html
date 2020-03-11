@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一个jquery demo</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        /*
+        window.onload = function (){
+            alert(1);
+        }
+        window.onload = function (){
+            alert(2);
+        }
+        console.log($('#div1')[0]);
+        console.log($('#div1').get(0));
+        */
+        $(document).ready(function (){
+            alert(1);
+        })
+        $(function (){
+            alert(2);
+        })
+    </script>
+</body>
+</html>

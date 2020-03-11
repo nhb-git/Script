@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础和层次选择器</title>
+    <style>
+        .item1{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p id="p1">123</p>
+        <ul>
+            <li class="item1">张三</li>
+            <li class="item2">李四</li>
+            <li class="item3">王五</li>
+        </ul>
+    </div>
+
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        // id
+        // console.log($('#p1'));
+        // 类
+        // console.log($('.box'));
+        // 后代
+        // console.log($('.box #p1'));
+        // 子代
+        // console.log($('.box>ul>li'));
+        // 组合选择器
+        // console.log($('p,ul,li'));
+        // 过滤选择器
+        // console.log($('ul li:first'));
+        // console.log($('ul li:last'));
+        // console.log($('ul li:not(.item2)'));
+        // console.log($('ul li:even'));
+        // console.log($('ul li:odd'));
+        // console.log($('ul li:eq(0)').text());
+        // console.log($('ul li:gt(0)').text());
+        // console.log($('ul li:lt(2)').text());
+        // console.log($('ul li:contains(张三)'));
+        // console.log($('ul:has(li)').addClass('a'));
+        // console.log($('ul li:hidden'));
+        // console.log($('ul li:visible'));
+        console.log($('div ul li[class=item1]'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM值操作</title>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <p>1</p>
+                <a href="#">百度</a>
+            </li>
+        </ul>
+        <input type="text" value="美女">
+        <select  id="single" multiple>
+            <option>苹果</option>
+            <option selected>橘子</option>
+            <option selected>香蕉</option>
+        </select>
+        <input type="checkbox" value="男"> 男
+        <input type="checkbox" value="女"> 女
+        <input type="radio" name="" id=""> 1
+
+    </div>
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            // html()会覆盖已有内容
+            // console.log($('.box ul li:first').html());
+            // console.log($('input[type=text]').val());
+            // console.log($('input[type=text]').val('帅哥'));
+            // $('#single').val('香蕉');
+            // $('#single').val(['苹果', '香蕉']);
+            $('input').val(['男', '女']);
+        })
+    </script>
+</body>
+</html>

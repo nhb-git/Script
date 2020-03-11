@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom操作之插入节点</title>
+</head>
+<body>
+    <h3>h3</h3>
+    <div class="box">
+        <h1>xyz</h1>
+    </div>
+    <div class="wrapper">
+        <button>按钮</button>
+    </div>
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            // 如果插入的是网页中的元素，会发生移动现象
+            // $('.box').append($('h3'));
+            // $('<h4>h4</h4>').appendTo('.box').css('color', 'red').click(function (){
+                // console.log($(this).text());
+            // });
+            // $('<h4>xxx</h4>').prependTo('.box');
+            // $('h3').after('<h4>heoo</h4>');
+            $('button').click(function (){
+                // $('.box').empty();
+                console.log($('.box').html(''));
+                // alert(1);
+                // $('.box').prepend($(this).remove());
+                // $('.box').prepend($(this).detach());
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单控件上内容选中和改变事件</title>
+</head>
+<body>
+    <textarea   cols="30" rows="10">请输入个人简介</textarea>
+    <input type="text" id="input1">
+    <script>
+        var aTextArea = document.getElementsByTagName('textarea')[0];
+        var oInput = document.getElementById('input1');
+        oInput.oninput = function (){
+            console.log('内容被实时的改变');
+            console.log(this.value);
+        };
+        aTextArea.onselect = function (){
+            console.log('内容被选中');
+        };
+        oInput.onchange = function (){
+            console.log('内容被改变');
+        };
+    </script>
+</body>
+</html>

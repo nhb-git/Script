@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多个库冲突</title>
+</head>
+<body>
+    <div id="div1">nhb</div>
+    <script src="./index.js"></script>
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        console.log($);
+        jQuery.noConflict();
+        (function ($){
+            $(function (){
+                $('#div1').css('color', 'red');
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>

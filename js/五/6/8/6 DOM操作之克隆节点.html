@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM操作之克隆节点</title>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>1</li>
+        </ul>
+    </div>
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            $('.box ul li').click(function (){
+                $(this).clone(true).appendTo('.box ul');
+            })
+        })
+    </script>
+</body>
+</html>

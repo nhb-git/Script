@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>筛选方法</title>
+</head>
+<body>
+    <div class="box">
+        <p>1</p>
+        <a href="#">百度</a>
+        <ul>
+            <li>li</li>
+            <li>l2</li>
+        </ul>
+    </div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            // children 获取匹配元素的子元素集合
+            // console.log($('.box').children());
+            // console.log($('.box').next());
+            // parent()获取的是亲父节点
+            // console.log($('ul li').parent());
+            // parents()获取所有的祖先
+            // console.log($('ul li').parents());
+            // console.log($('.box1').prev());
+            $('ul li').eq(1).css('color', 'red');
+        });
+    </script>
+</body>
+</html>

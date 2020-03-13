@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>宽和高的获取</title>
+
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid #000;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            console.log($('.box').width());
+            console.log($('.box').height());
+            console.log($('.box').innerWidth());
+            console.log($('.box').innerHeight());
+            console.log($('.box').outerWidth());
+        });
+    </script>
+</body>
+</html>

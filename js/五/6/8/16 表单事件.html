@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单事件</title>
+</head>
+<body>
+    <form action="">
+        <input type="text">
+        <select name="" id="select">
+            <option value="a">a</option>
+            <option value="b">b</option>
+        </select>
+        <input type="submit" name="" value="提交">
+    </form>
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            // $('input').change(function (){
+                // console.log('输入框的值发生变化了');
+            // });
+            // $('#select').change(function (){
+                // console.log($(this).val());
+            // });
+            $('form').submit(function (event){
+                // event.preventDefault();
+                console.log(111);
+            });
+        });
+    </script>
+</body>
+</html>

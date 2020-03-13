@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>siblings</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <button>按钮1</button>
+        </li>
+        <li>
+            <button>按钮2</button>
+        </li>
+        <li>
+            <button>按钮3</button>
+        </li>
+    </ul>
+
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            $('button').click(function (){
+                $(this).css('background-color', 'red').parent().siblings('li').children().css('background-color', '#fff');
+            });
+        });
+    </script>
+</body>
+</html>

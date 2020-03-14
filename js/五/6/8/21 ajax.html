@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax</title>
+</head>
+<body>
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            $.ajax({
+                url: 'https://www.luffycity.com/',
+                method: 'get',
+                success: function (res){
+                    console.log(res);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

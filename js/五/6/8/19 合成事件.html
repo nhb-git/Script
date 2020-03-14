@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合成事件</title>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">切换</button>
+    <div class="box"></div>
+
+    <script src="../../../jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            $('.box').hover(function(){
+                $(this).css('background-color', 'green');
+            }, function (){
+                $(this).css('background-color', 'red');
+            });
+            $('.btn').click(function (){
+                $('.box').toggle();
+            });
+        });
+    </script>
+</body>
+</html>

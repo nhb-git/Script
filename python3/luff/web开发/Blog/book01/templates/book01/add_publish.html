@@ -1,0 +1,48 @@
+{% extends 'book01/base.html' %}
+
+{% block title %}
+    <title>增加出版社</title>
+{% endblock %}
+
+{% block css %}
+    <style type="text/css" rel="stylesheet">
+        .content{
+            margin-top: 100px;
+        }
+    </style>
+{% endblock %}
+
+{% block header %}
+    <div class="header">
+        <div class="container-fluid">
+            <h5><strong>增加出版社</strong></h5>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
+                    <form action="{% url 'book01:add_publish' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name">出版社名称</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="请输入出版社名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">出版社城市</label>
+                            <input type="text" class="form-control" id="city" name="city", placeholder="请输入出版社的城市">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">出版社邮箱</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="请输入出版社邮箱">
+                        </div>
+                        <button type="submit" class="btn btn-success pull-right">保存</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

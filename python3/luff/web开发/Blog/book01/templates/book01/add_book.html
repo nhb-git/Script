@@ -1,0 +1,64 @@
+{% extends 'book01/base.html' %}
+
+{% block title %}
+    <title>增加书籍</title>
+{% endblock %}
+
+{% block css %}
+    <style type="text/css" rel="stylesheet">
+        .content{
+            margin-top: 100px;
+        }
+    </style>
+{% endblock %}
+
+{% block header %}
+    <div class="header">
+        <div class="container-fluid">
+            <h6><strong>增加书籍</strong></h6>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
+                    <form action="{% url 'book01:add_book' %}" method="post">
+                         {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name">书籍名称</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="请输入书籍名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">书籍价钱</label>
+                            <input type="number" class="form-control" id="price" name="price" placeholder="请输入书籍价钱">
+                        </div>
+                        <div class="form-group">
+                            <label for="pub_date">出版时间</label>
+                            <input type="date" class="form-control" id="pub_date" name="pub_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="publish">书籍出版社</label>
+                            <select class="form-control" id="publish_list" name="publish_list">
+                                {% for publish in publishes %}
+                                    <option value="{{ publish.id }}">{{ publish.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="authors">书籍作者</label>
+                            <select multiple class="form-control" id="author_list" name="author_list">
+                                {% for author in authors %}
+                                    <option value="{{ author.id }}">{{ author.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success pull-right">保存</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

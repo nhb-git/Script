@@ -1,0 +1,56 @@
+{% extends 'book01/base.html' %}
+
+{% block title %}
+    <title>增加作者</title>
+{% endblock %}
+
+{% block css %}
+    <style type="text/css">
+        .content{
+            margin-top: 100px;
+        }
+    </style>
+{% endblock %}
+
+{% block header %}
+    <div class="header">
+        <div class="container-fluid">
+            <h5><strong>增加作者信息</strong></h5>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
+                    <form action="{% url 'book01:add_author' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name">作者名称</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="请输入作者名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">年龄</label>
+                            <input type="text" class="form-control" id="age" name="age" placeholder="请输入作者年龄">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">电话</label>
+                            <input type="text" class="form-control" id="telephone" name="telephone" placeholder="请输入作者电话号码">
+                        </div>
+                        <div class="form-group">
+                            <label for="addr">地址</label>
+                            <input type="text" class="form-control" id="addr" name="addr" placeholder="请输入作者住址">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">生日</label>
+                            <input type="date" class="form-control" id="birthday" name="birthday" placeholder="请输入作者生日">
+                        </div>
+                        <button type="submit" class="btn btn-success pull-right">保存</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

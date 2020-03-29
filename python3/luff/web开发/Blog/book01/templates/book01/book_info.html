@@ -1,0 +1,70 @@
+{% extends 'book01/base.html' %}
+
+{% block title %}
+    <title>书籍详情</title>
+{% endblock %}
+
+{% block css %}
+    <style type="text/css" rel="stylesheet">
+        .content{
+            margin-top: 100px;
+        }
+        .book_info{
+            margin-top: 20px;
+        }
+    </style>
+{% endblock %}
+
+{% block header %}
+    <div class="header">
+        <div class="container-fluid">
+            <h4><strong>书籍详情</strong></h4>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
+                    <a class="btn btn-success" href="{% url 'book01:add_book' %}">添加书籍</a>
+                    <a class="btn btn-success" href="{% url 'book01:add_publish' %}">添加出版社</a>
+                    <a class="btn btn-success" href="{% url 'book01:add_author' %}">添加作者</a>
+                    <div class="book_info">
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>编号</th>
+                                <th>书籍名称</th>
+                                <th>书籍价钱</th>
+                                <th>书籍出版日期</th>
+                                <th>书籍出版社</th>
+                                <th>书籍作者</th>
+                                <th>操作</th>
+                            </tr>
+                            {% for book_info in books_info %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>{{ book_info.name }}</td>
+                                    <td>{{ book_info.price }}</td>
+                                    <td>{{ book_info.pub_date | date:'Y-m-d'}}</td>
+                                    <td>{{ book_info.publish.name }}</td>
+                                    <td>
+                                        {% for author in book_info.authors.all %}
+                                            <span>{{ author }}; </span>
+                                        {% endfor %}
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-info" href="{% url 'book01:edit_book' book_info.id %}">编辑</a>
+                                        <a class="btn btn-danger" href="{% url 'book01:delete_book' book_info.id %}">删除</a>
+                                    </td>
+                                </tr>
+                            {% empty %}
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

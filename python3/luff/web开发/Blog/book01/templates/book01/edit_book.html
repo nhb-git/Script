@@ -1,0 +1,119 @@
+{% extends 'book01/base.html' %}
+
+{% block title %}
+    <title>编辑书籍</title>
+{% endblock %}
+
+{% block css %}
+    <style type="text/css" rel="stylesheet">
+        .content{
+            margin-top: 100px;
+        }
+    </style>
+{% endblock %}
+
+{% block header %}
+    <div class="header">
+        <div class="container-fluid">
+            <h3><strong>编辑书籍</strong></h3>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
+                    <form action="{% url 'book01:edit_book' book_info.id %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name">书籍名称</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{ book_info.name }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">书籍价格</label>
+                            <input type="number" class="form-control" id="price" name="price" value="{{ book_info.price }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="pub_date">出版时间</label>
+                            <input type="date" class="form-control" id="pub_date" name="pub_date" value="{{ book_info.pub_date | date:'Y-m-d' }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="publish">书籍出版社</label>
+                            <a data-toggle="modal" data-target="#modal_publish" href="#">添加出版社</a>
+                            <select class="form-control" id="publish_list" name="publish_list">
+                                {% for publish in publishes %}
+                                    {% if book_info.publish.id == publish.id %}
+                                        <option value="{{ publish.id }}" selected>{{ publish.name }}</option>
+                                    {% else %}
+                                        <option value="{{ publish.id }}">{{ publish.name }}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="authors">书籍作者</label>
+                            <select multiple class="form-control" id="author_list" name="author_list">
+                                {% for author in authors %}
+                                    {% if author in book_info.authors.all %}
+                                        <option value="{{ author.id }}" selected>{{ author.name }}</option>
+                                    {% else %}
+                                        <option value="{{ author.id }}">{{ author.name }}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success pull-right">保存</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'book01/modal_add_publish.html' %}
+{% endblock %}
+
+{% block script %}
+    <script rel="script">
+        $(function () {
+            $('#modal_publish .btn-publish-save').click(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: '{% url "book01:add_publish" %}',
+                    type: 'POST',
+                    data: {
+                        name: $('#modal_publish .publish-name').val(),
+                        city: $('#modal_publish .publish-city').val(),
+                        email: $('#modal_publish .publish-email').val(),
+                    },
+                    success: function (data) {
+                        $('#modal_publish').modal('hide');
+                        var old_option = $('#publish_list option:selected').text();
+                        console.log(old_option);
+                        $('#publish_list').empty();
+                        for(var i=0; i<data.length; i++)
+                        {
+                            var id = data[i]['pk'];
+                            var name = data[i]['fields']['name'];
+                            if(name == old_option)
+                            {
+                                $('#publish_list').append(
+                                    '<option value='+id+' selected'+'>'+name+'</option>'
+                                );
+                            }
+                            else
+                            {
+                                $('#publish_list').append(
+                                    '<option value='+id+'>'+name+'</option>'
+                                );
+                            }
+                        }
+                    }
+                });
+            });
+            $('body').on('hidden.bs.modal', '#modal_publish', function (){
+                $(this).removeData('bs.modal');
+            });
+        })
+    </script>
+{% endblock %}

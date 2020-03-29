@@ -1,0 +1,50 @@
+{% extends 'book01/base.html' %}
+
+{% block title %}
+    <title>文件上传</title>
+{% endblock %}
+
+{% block header %}
+    <div class="header">
+        <div class="container-fluid">
+            <h4><strong>文件上传</strong></h4>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <form action="{% url 'book01:file_upload' %}" method="post" enctype="multipart/form-data">
+                <span>上传文件</span>
+                <input type="file" name="img">
+                <button type="submit">提交</button>
+            </form>
+            <form>
+                <input type="file" id="img">
+                <button type="button" class="btn btn-success" id="ajax_btn">提交</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(function () {
+            $('#ajax_btn').click(function () {
+                var form_data = new FormData();
+                form_data.append('img', $('#img')[0].files[0]);
+                $.ajax({
+                    url: '',
+                    type: 'post',
+                    contentType: false,
+                    processData: false,
+                    data:form_data,
+                    success: function (data) {
+                        console.log(data);
+                    }
+                });
+            });
+        })
+    </script>
+{% endblock %}

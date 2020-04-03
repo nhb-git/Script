@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单实例</title>
+    <style>
+        .main{
+            width: 500px;
+        }
+        .tip{
+            width: 100px;
+            height: 30px;
+            text-align: right;
+            display: inline-block;
+        }
+        .content{
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            text-align: left;
+            display: inline-block;
+        }
+        .btn-sub{
+            width: 200px;
+            height: 30px;
+            font-size: 22px;
+            color: #fff;
+            background-color: #69b946;
+            line-height: 30px;
+            text-align: center;
+        }
+        .sbtn{
+            width: 300px;
+            display: inline-block;
+            height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <span class="tip">用户名:</span>
+            <span class="content">
+                <input type="text" name="user">
+            </span>
+        </div>
+        <div>
+            <span class="tip">密码:</span>
+            <span class="content">
+                <input type="password" name="pwd">
+            </span>
+        </div>
+        <div>
+            <span class="tip">确认密码:</span>
+            <span class="content">
+                <input type="password" name="re_pwd">
+            </span>
+        </div>
+        <div>
+            <span class="tip">性别:</span>
+            <span class="content">
+                <input type="radio" name="sex" value="man">男
+                <input type="radio" name="sex" value="women">女
+            </span>
+        </div>
+        <div>
+            <span class="tip">生日年月:</span>
+            <span class="content">
+                <select name="year" id="year">
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                </select>
+                <select name="month" id="month">
+                    <option value="12">12</option>
+                    <option value="11">11</option>
+                    <option value="10">10</option>
+                    <option value="09">09</option>
+                </select>
+            </span>
+        </div>
+        <div>
+            <span class="sbtn">
+                <input type="submit" class="btn-sub" value="立即注册">
+            </span>
+        </div>
+    </div>
+</body>
+</html>

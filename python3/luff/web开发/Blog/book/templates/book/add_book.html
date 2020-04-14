@@ -1,0 +1,40 @@
+{% extends 'book/base.html' %}
+
+{% block title %}
+    <title>添加书籍</title>
+{% endblock %}
+
+{% block header %}
+    <div class="container-fluid">
+        <h3><strong>添加书籍</strong></h3>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <form action="{% url 'book:add_book' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="BookName">书籍名称</label>
+                        <input type="text" class="form-control" id="BookName" name="book_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="BookPrice">价格</label>
+                        <input type="text" class="form-control" id="BookPrice" name="book_price">
+                    </div>
+                    <div class="form-group">
+                        <label for="BookPubDate">出版日期</label>
+                        <input type="date" class="form-control" id="BookPubDate" name="pub_date">
+                    </div>
+                    <div class="form-group">
+                        <label for="BookPublish">出版社</label>
+                        <input type="text" class="form-control" id="BookPublish" name="publish">
+                    </div>
+                    <button type="submit" class="btn btn-success pull-right">提交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

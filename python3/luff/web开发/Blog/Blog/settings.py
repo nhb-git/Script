@@ -39,13 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blogs',
     'news',
+    'book',
+    'book01',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -81,10 +83,20 @@ WSGI_APPLICATION = 'Blog.wsgi.application'
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
 # }
+# DATABASES = {
+    # 'default': {
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'blogs',
+        # 'USER': 'root',
+        # 'PASSWORD': 'XG*s2Ty#qdK3',
+        # 'HOST': '49.232.22.202',
+        # 'PORT': 3306,
+    # }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blogs',
+        'NAME': 'book01',
         'USER': 'root',
         'PASSWORD': 'XG*s2Ty#qdK3',
         'HOST': '49.232.22.202',
@@ -134,3 +146,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+LOGIN_URL = '/login/'

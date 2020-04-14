@@ -60,3 +60,12 @@ class UserInfo(models.Model):
     name = models.CharField(unique=True, max_length=64)
     email = models.EmailField()
     tel = models.CharField(max_length=30)
+
+
+class User(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(unique=True, max_length=64)
+    password = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.name

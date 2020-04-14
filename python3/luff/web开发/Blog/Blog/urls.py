@@ -20,4 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path('^blogs/', include(('blogs.urls', 'blogs'))),
     re_path('^news/', include(('news.urls', 'news'))),
+    re_path('^book/', include(('book.urls', 'book'))),
+    re_path('^book01/', include(('book01.urls', 'book01'))),
 ]

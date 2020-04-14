@@ -1,9 +1,11 @@
 from django.shortcuts import render, HttpResponse, redirect, reverse
 from django.core import serializers
 from django.core.paginator import Paginator, EmptyPage
+from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 import json
 
-from book01.models import Author, AuthorDetail, Publish, Book, PageDemo
+from book01.models import Author, AuthorDetail, Publish, Book, PageDemo, User
 from book01.forms import UserReg
 
 # Create your views here.
@@ -165,3 +167,67 @@ def reg(request):
             return render(request, 'book01/reg.html', locals())
     form = UserReg()
     return render(request, 'book01/reg.html', locals())
+
+
+def session_login(request):
+    if request.method == 'POST':
+        user_obj = User.objects.filter(name=request.POST.get('user'), password=request.POST.get('pwd')).first()
+        if user_obj:
+            # ret = HttpResponse('登录成功')
+            # ret.set_cookie('name', request.POST.get('user'))
+            # import datetime
+            # date = datetime.datetime(year=2020, month=3, day=30, hour=16, minute=18, second=0)
+            # ret.set_cookie('is_login', True, path='/book01/test')
+            request.session['is_login'] = True
+            return HttpResponse('登录成功')
+        else:
+            return render(request, 'book01/session_login.html')
+    return render(request, 'book01/session_login.html')
+
+
+def session_index(request):
+    if request.COOKIES.get('name'):
+        return render(request, 'book01/session_index.html')
+    else:
+        return redirect(reverse('book01:session_login'))
+
+
+def session_test(request):
+    print(request.session.get('is_login'))
+    return HttpResponse('test')
+
+
+def session_del(request):
+    # del request.session['is_login']
+    request.session.flush()
+    return HttpResponse('del')
+
+
+def auth_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('user')
+        pwd = request.POST.get('pwd')
+        user = auth.authenticate(username=username, password=pwd)
+        if user:
+            auth.login(request, user)
+            next_url = request.GET.get('next', reverse('book01:auth_index'))
+            return redirect(next_url)
+    return render(request, 'book01/session_login.html')
+
+
+def auth_index(request):
+    return render(request, 'book01/session_index.html')
+
+
+def auth_logout(request):
+    auth.logout(request)
+    return redirect(reverse('book01:session_login'))
+
+
+def reg(request):
+    if request.method == 'POST':
+        username = request.POST.get('user')
+        pwd = request.POST.get('pwd')
+        user = auth.models.User.objects.create_user(username=username, password=pwd)
+        return redirect(reverse('book01:session_login'))
+    return render(request, 'book01/reg.html')

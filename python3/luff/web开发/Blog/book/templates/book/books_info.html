@@ -13,54 +13,56 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <button class="btn btn-primary">添加书籍</button>
-            <table class="table table-bordered">
-                <tr>
-                    <td>
-                        <h6><strong>书籍名称</strong></h6>
-                    </td>
-                    <td>
-                        <h6><strong>价格</strong></h6>
-                    </td>
-                    <td>
-                        <h6><strong>出版日期</strong></h6>
-                    </td>
-                    <td>
-                        <h6><strong>出版社</strong></h6>
-                    </td>
-                    <td>
-                        <h6><strong>删除操作</strong></h6>
-                    </td>
-                    <td>
-                        <h6><strong>编辑操作</strong></h6>
-                    </td>
-                </tr>
-                {% for book_info in books_info %}
-                <tr class="active">
-                    <td>
-                        <h6><strong>{{ book_info.title }}</strong></h6>
-                    </td>
-                    <td>
-                        <h6><strong>{{ book_info.price }}</strong></h6>
-                    </td>
-                    <td>
-                        <h6><strong>{{ book_info.pub_date | date:"Y-m-d"}}</strong></h6>
-                    </td>
-                    <td>
-                        <h6><strong>{{ book_info.publish }}</strong></h6>
-                    </td>
-                    <td>
-                        <h6><button class="btn btn-danger"><strong>删除</strong></button></h6>
-                    </td>
-                    <td>
-                        <h6><button class="btn btn-info"><strong>编辑</strong></button></h6>
-                    </td>
-                </tr>
-                {% empty %}
-                {% endfor %}
-            </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <a class="btn btn-primary" href="{% url 'book:add_book' %}">添加书籍</a>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>
+                            <h6><strong>书籍名称</strong></h6>
+                        </td>
+                        <td>
+                            <h6><strong>价格</strong></h6>
+                        </td>
+                        <td>
+                            <h6><strong>出版日期</strong></h6>
+                        </td>
+                        <td>
+                            <h6><strong>出版社</strong></h6>
+                        </td>
+                        <td>
+                            <h6><strong>删除操作</strong></h6>
+                        </td>
+                        <td>
+                            <h6><strong>编辑操作</strong></h6>
+                        </td>
+                    </tr>
+                    {% for book_info in books_info %}
+                    <tr class="active">
+                        <td>
+                            <h6><strong>{{ book_info.title }}</strong></h6>
+                        </td>
+                        <td>
+                            <h6><strong>{{ book_info.price }}</strong></h6>
+                        </td>
+                        <td>
+                            <h6><strong>{{ book_info.pub_date | date:"Y-m-d"}}</strong></h6>
+                        </td>
+                        <td>
+                            <h6><strong>{{ book_info.publish }}</strong></h6>
+                        </td>
+                        <td>
+                            <h6><a class="btn btn-danger" href="{% url 'book:delete_book' book_info.id %}"><strong>删除</strong></a></h6>
+                        </td>
+                        <td>
+                            <h6><a class="btn btn-info" href="{% url 'book:edit_book' book_info.id %}"><strong>编辑</strong></a></h6>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    {% endfor %}
+                </table>
+            </div>
         </div>
     </div>
 {% endblock %}

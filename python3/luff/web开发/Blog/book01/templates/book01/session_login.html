@@ -6,10 +6,10 @@
 </head>
 <body>
 
-    <form action="{% url 'book01:reg' %}" method="post">
+    <form action="{% url 'book01:auth_login' %}" method="post">
         用户名<input type="text" name="user">
         密码<input type="password" name="pwd">
-        <button type="submit">注册</button>
+        <button type="submit">登录</button>
     </form>
 </body>
 </html>

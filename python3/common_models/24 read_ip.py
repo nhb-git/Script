@@ -17,10 +17,10 @@ async def get_ip(file):
         print('file not exists')
 
 
-@asyncio.coroutine
-def get_ip_str(file):
+# @asyncio.coroutine
+async def get_ip_str(file):
     print('start exec ...')
-    source_ip = yield from get_ip(file)
+    source_ip = await get_ip(file)
     print(';'.join([ip.strip() for ip in source_ip]))
 
 

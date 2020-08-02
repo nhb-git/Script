@@ -45,26 +45,21 @@ from multiprocessing import Process, Pool, current_process
 def task(name):
     print('start task %s (%s)...' % (name, os.getpid()))
     start = time.time()
-    time.sleep(random.random() * 3)
+    time.sleep(3)
     print('end task %s runs %0.2f seconds.' % (name, (time.time() - start)))
     return current_process().name + 'done'
 
 
 if __name__ == '__main__':
-    print('parent process %s.' % os.getpid())
-
-    result = []
-
-    p = Pool()  # 初始化进程池
-    for i in range(5):
-        result.append(p.apply_async(task, args=(i,)))  # 追加任务 apply_async 是异步非阻塞的，就是不用等待当前进程执行完毕，随时根据系统调度来进行进程切换。
-
+    start_time = time.time()
+    print('parents process %s' % os.getpid())
+    p = Pool()
+    ret = []
+    for i in range(6):
+        ret.append(p.apply_async(task, args=(i,)))
     p.close()
+    p.join()
 
-    p.join()  # 等待所有结果执行完毕
-
-    for res in result:
-        print(res.get())  # get()函数得出每个返回结果的值
-
-    print(f'all done at: {ctime()}')
-    print(type(ctime()))
+    for r in ret:
+        print(r.get())
+    print(time.time() - start_time)

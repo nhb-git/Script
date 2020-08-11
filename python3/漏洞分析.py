@@ -40,5 +40,5 @@ class Vul:
 
 
 v = Vul()
-v.vul_file_name = r'D:\Lenovo Project Document\MDS\Copy of Weely Meeting OVP Vulnerability.xlsx'
+v.vul_file_name = r'C:\Users\niuhb2\Downloads\Weely Meeting OVP Vulnerability.xlsx'
 print(v.get_vul_ip())
